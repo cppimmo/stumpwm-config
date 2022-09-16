@@ -16,16 +16,15 @@
 ;; (set-module-dir "/usr/share/stumpwm/contrib/")
 
 ;; Load up my own lisp source files.
-(load "cppimmo/utils.lisp")
-(load "cppimmo/colors.lisp")
-(load "cppimmo/theme.lisp")
-(load "cppimmo/placement.lisp")
-(load "cppimmo/modeline.lisp")
-(load "cppimmo/commands.lisp")
-(load "cppimmo/keybinds.lisp")
+(load "~/.stumpwm.d/cppimmo/utils.lisp")
+(load "~/.stumpwm.d/cppimmo/colors.lisp")
+(load "~/.stumpwm.d/cppimmo/theme.lisp")
+(load "~/.stumpwm.d/cppimmo/placement.lisp")
+(load "~/.stumpwm.d/cppimmo/modeline.lisp")
+(load "~/.stumpwm.d/cppimmo/commands.lisp")
+(load "~/.stumpwm.d/cppimmo/keybinds.lisp")
 
-(setf *startup-message* nil ; Disable startup message.
-	  *window-format*
+(setf *startup-message* "Welcome, Brian!"
 	  *window-border-style* :thin
 	  *message-window-padding* 3
 	  *message-window-y-padding* 3
@@ -33,6 +32,7 @@
 	  *input-window-gravity* :top-left
 	  *input-history-ignore-duplicates* t
 	  *mouse-focus-policy* :sloppy ; Change window focus on hover.
+	  *float-window-modifier* :SUPER
 	  *float-window-border* 3
 	  *float-window-title-height* 1
 	  *maxsize-border-width* 3
@@ -40,7 +40,7 @@
 	  *normal-border-width* 3) 
 
 ;; Set the prefix key.
-(set-prefix-key (kbd "C-t"))
+(set-prefix-key (kbd "s-SPC"))
 
 (run-shell-command "brightnessctl set 15%")
 (run-shell-command (format nil "xcompmgr -CcfF -I-.05 -O-.05 -D2 -t-1 -l-3 -r2.~
