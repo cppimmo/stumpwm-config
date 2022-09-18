@@ -1,19 +1,14 @@
 ;; -*-lisp-*-
 ;;
-;; My StumpWM configuration.
-
-;; Specify how quicklisp should initialize.
-;;(let ((quicklisp-init (merge-pathnames ".quicklisp/setup.lisp"
-;;									   (user-homedir-pathname))))
-;;  (when (probe-file quicklisp-init)
-;;	(load quicklisp-init)))
+;;; My StumpWM configuration.
+;; Ensure that quicklisp is loaded in your ~/.sbclrc
 
 (in-package :stumpwm)
 ;; Prevent having to prefix stumpwm: everytime I use a member of this package.
 (setf *default-package* :stumpwm)
 
-;; Set module directory?
-;; (set-module-dir "/usr/share/stumpwm/contrib/")
+;; Set module directory.
+;; (set-module-dir "~/.stumpwm.d/modules")
 
 ;; Load up my own lisp source files.
 (load "~/.stumpwm.d/cppimmo/utils.lisp")
@@ -39,31 +34,28 @@
 	  *transient-border-width* 3
 	  *normal-border-width* 3) 
 
+
+(load-module "battery-portable")
+(ql:quickload "xembed")
+(load-module "stumptray")
+(stumptray::stumptray)
 (setf *window-format* "%m%n%s%c"
-	  *screen-mode-line-format* (list "[^B%n^b] %W^>%d")
+	  *screen-mode-line-format* (list "[^B%n^b] %W^> %B | %d     ")
 	  *time-modeline-string* "%d-%b-%Y %T"
 	  *mode-line-timeout* 2)
 (enable-mode-line (current-screen) (current-head) t)
 
-;;(ql:quickload "clx-truetype")
-;;(load-module "ttf-fonts")
-;;(xft:cache-fonts)
-;;(set-font (make-instance 'xft:font
+;; (ql:quickload "clx-truetype")
+;; (load-module "ttf-fonts")
+;; (xft:cache-fonts)
+;; (set-font (make-instance 'xft:font
 ;;						 :family "Ubuntu Mono"
 ;;						 :subfamily "Regular"
-;;						 :size 12
+;;						 :size 14
 ;;						 :antialias t))
- (set-font "-xos4-terminus-bold-r-normal-*-17-*-*-*-*-*-*-*")
+(set-font "-xos4-terminus-bold-r-normal-*-17-*-*-*-*-*-*-*")
 ;; (set-font "-misc-ubuntu mono-bold-r-normal-*-17-*-*-*-*-*-*-*")
 
-;; Set the prefix key.
-(set-prefix-key (kbd "s-SPC"))
+(set-prefix-key (kbd "s-SPC")) ; Set the prefix key.
 
-(run-shell-command "brightnessctl set 15%")
-(run-shell-command (format nil "xcompmgr -CcfF -I-.05 -O-.05 -D2 -t-1 -l-3 -r2.~
-5 -o.5"))
-(run-shell-command "dunst")
-(run-shell-command "nm-applet")
-(run-shell-command "pasystray")
-;; Use feh --bg-scale ~/path/to/file beforehand.
-(run-shell-command "~/.fehbg")
+(load "~/.stumpwm.d/cppimmo/autostart.lisp") ; Startup programs.

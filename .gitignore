@@ -1,2 +1,4 @@
 # Ignore log files.
 stumpwm.log*
+# Ignore modules directory.
+modules/**

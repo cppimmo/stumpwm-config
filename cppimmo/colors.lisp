@@ -1,4 +1,8 @@
 ;; -*-lisp-*-
+
+(in-package :stumpwm)
+(setf *default-package* :stumpwm)
+
 ;; Foreground:   #a5a2a2
 ;; Background:   #090300
 ;; CursorColor:  #a5a2a2
