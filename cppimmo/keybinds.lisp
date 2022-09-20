@@ -27,11 +27,11 @@
 ;; So prefix e e for emacs.
 
 ;; Power and lock bindings.
-(define-key *root-map* (kbd "s-P") "cppimmo-poweroff")
-(define-key *root-map* (kbd "s-R") "cppimmo-reboot")
-(define-key *root-map* (kbd "s-S") "cppimmo-suspend")
-(define-key *root-map* (kbd "s-H") "cppimmo-hibernate")
-(define-key *root-map* (kbd "s-L") "cppimmo-lock-screen")
+(define-key *root-map* (kbd "s-p") "cppimmo-poweroff")
+(define-key *root-map* (kbd "s-r") "cppimmo-reboot")
+(define-key *root-map* (kbd "s-s") "cppimmo-suspend")
+(define-key *root-map* (kbd "s-h") "cppimmo-hibernate")
+(define-key *root-map* (kbd "s-l") "cppimmo-lock-screen")
 (define-key *root-map* (kbd "/") "cppimmo-program-menu")
 
 ;; Function Keys
