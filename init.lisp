@@ -11,13 +11,13 @@
 ;; (set-module-dir "~/.stumpwm.d/modules")
 
 ;; Load up my own lisp source files.
-(load "~/.stumpwm.d/cppimmo/utils.lisp")
-(load "~/.stumpwm.d/cppimmo/colors.lisp")
-(load "~/.stumpwm.d/cppimmo/theme.lisp")
-(load "~/.stumpwm.d/cppimmo/placement.lisp")
-;; (load "~/.stumpwm.d/cppimmo/modeline.lisp")
-(load "~/.stumpwm.d/cppimmo/commands.lisp")
-(load "~/.stumpwm.d/cppimmo/keybinds.lisp")
+(load "~/.stumpwm.d/cppimmo/utils.lisp") ; Utility functions.
+(load "~/.stumpwm.d/cppimmo/colors.lisp") ; Colors.
+(load "~/.stumpwm.d/cppimmo/theme.lisp") ; Theme setting.
+(load "~/.stumpwm.d/cppimmo/placement.lisp") ; Window placement.
+;; (load "~/.stumpwm.d/cppimmo/modeline.lisp") ; Modeline format.
+(load "~/.stumpwm.d/cppimmo/commands.lisp") ; Commands for keybindings.
+(load "~/.stumpwm.d/cppimmo/keybinds.lisp") ; Keybind setting.
 
 (setf *startup-message* "Welcome, Brian!"
 	  *window-border-style* :thin
