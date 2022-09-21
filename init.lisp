@@ -38,7 +38,7 @@
 (load-module "battery-portable")
 (ql:quickload "xembed")
 (load-module "stumptray")
-(stumptray::stumptray)
+
 (setf *window-format* "%m%n%s%c"
 	  *screen-mode-line-format* (list "[^B%n^b] %W^> %B | %d     ")
 	  *time-modeline-string* "%d-%b-%Y %T"
@@ -58,4 +58,6 @@
 
 (set-prefix-key (kbd "s-SPC")) ; Set the prefix key.
 
+;; This line needs to be as close to the end of the configuration file as possible to prevent crashing.
+(stumptray::stumptray)
 (load "~/.stumpwm.d/cppimmo/autostart.lisp") ; Startup programs.
