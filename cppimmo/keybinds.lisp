@@ -21,7 +21,7 @@
   (let ((map (make-sparse-keymap)))
 	(define-key map (kbd "a") "exec pavucontrol")
 	(define-key map (kbd "e") "exec emacs") 
-	(define-key map (kbd "f") "cppimmo/firefox")
+	(define-key map (kbd "f") "cppimmo/cmd-firefox")
 	(define-key map (kbd "s") "seamonkey")
 	map))
 (define-key *root-map* (kbd "e") '*progn-bindings*)
