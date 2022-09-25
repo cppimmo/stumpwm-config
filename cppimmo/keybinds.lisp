@@ -10,19 +10,19 @@
 
 ;; Unbind program keys.
 (undefine-key *root-map* (kbd "c")) ; xterm
-;; (undefine-key *root-map* (kbd "C-c")) ; xterm
+(undefine-key *root-map* (kbd "C-c")) ; xterm
 (undefine-key *root-map* (kbd "e")) ; emacs
 (undefine-key *root-map* (kbd "C-e")) ; emacs
 
-(define-key *root-map* (kbd "c") "exec urxvt")
-(define-key *root-map* (kbd "C-c") "exec xterm")
 ;; Program bindings.
 (defvar *progn-bindings*
   (let ((map (make-sparse-keymap)))
+	(define-key map (kbd "c") "exec urxvt")
+	(define-key map (kbd "x") "exec xterm") ; xterm as backup.
 	(define-key map (kbd "a") "exec pavucontrol")
 	(define-key map (kbd "e") "exec emacs") 
 	(define-key map (kbd "f") "cppimmo/cmd-firefox")
-	(define-key map (kbd "s") "seamonkey")
+	(define-key map (kbd "s") "exec seamonkey")
 	map))
 (define-key *root-map* (kbd "e") '*progn-bindings*)
 ;; So prefix e e for emacs.
