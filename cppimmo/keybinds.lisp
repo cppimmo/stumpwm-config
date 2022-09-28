@@ -9,10 +9,10 @@
 (undefine-key *group-root-map* (kbd "k"))
 
 ;; Unbind program keys.
-(undefine-key *root-map* (kbd "c")) ; xterm
-(undefine-key *root-map* (kbd "C-c")) ; xterm
-(undefine-key *root-map* (kbd "e")) ; emacs
-(undefine-key *root-map* (kbd "C-e")) ; emacs
+;; (undefine-key *root-map* (kbd "c")) ; xterm
+;; (undefine-key *root-map* (kbd "C-c")) ; xterm
+;; (undefine-key *root-map* (kbd "e")) ; emacs
+;; (undefine-key *root-map* (kbd "C-e")) ; emacs
 
 ;; Program bindings.
 (defvar *progn-bindings*
