@@ -20,7 +20,7 @@
 	(define-key map (kbd "c") "exec urxvt")
 	(define-key map (kbd "x") "exec xterm") ; xterm as backup.
 	(define-key map (kbd "a") "exec pavucontrol")
-	(define-key map (kbd "e") "exec emacs") 
+	(define-key map (kbd "e") "exec runemacs") ; exec emacs.
 	(define-key map (kbd "f") "cppimmo/cmd-firefox")
 	(define-key map (kbd "s") "exec seamonkey")
 	map))

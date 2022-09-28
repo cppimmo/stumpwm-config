@@ -41,7 +41,7 @@
 
 (setf *window-format* "%m%n%s%c"
 	  *screen-mode-line-format* (list "[^B%n^b] %W^> %B | %d     ")
-	  *time-modeline-string* "%d-%b-%Y %T"
+	  *time-modeline-string* "%D %I:%M%p"
 	  *mode-line-timeout* 2)
 (enable-mode-line (current-screen) (current-head) t)
 
