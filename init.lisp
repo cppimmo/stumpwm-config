@@ -21,18 +21,18 @@
 
 (setf *startup-message* "Welcome, Brian!"
 	  *window-border-style* :thin
-	  *message-window-padding* 3
-	  *message-window-y-padding* 3
+	  *message-window-padding* 2
+	  *message-window-y-padding* 2
 	  *message-window-gravity* :top-right
 	  *input-window-gravity* :top-left
 	  *input-history-ignore-duplicates* t
 	  *mouse-focus-policy* :click ; Change window focus on click.
 	  *float-window-modifier* :SUPER
-	  *float-window-border* 3
+	  *float-window-border* 2
 	  *float-window-title-height* 1
-	  *maxsize-border-width* 3
-	  *transient-border-width* 3
-	  *normal-border-width* 3) 
+	  *maxsize-border-width* 2
+	  *transient-border-width* 2
+	  *normal-border-width* 2) 
 
 
 (load-module "battery-portable")
@@ -46,7 +46,7 @@
 	  *mode-line-background-color* "#bfbfbf"
 	  *mode-line-foreground-color* "#000000"
 	  *mode-line-border-color* "#000000"
-	  *mode-line-border-width* 3)
+	  *mode-line-border-width* 1)
 (enable-mode-line (current-screen) (current-head) t)
 
 ;; (ql:quickload "clx-truetype")
