@@ -40,24 +40,24 @@
 (load-module "stumptray")
 
 (setf *window-format* "%m%n%s%c"
-	  *screen-mode-line-format* (list "[^B%n^b] %W^> %B | %d     ")
-	  *time-modeline-string* "%D %I:%M%p"
+	  *screen-mode-line-format* (list "[^b%n^b] %W^> %B | %d     ")
+	  *time-modeline-string* "%m/%d/%y %I:%M%p"
 	  *mode-line-timeout* 2
 	  *mode-line-background-color* "#bfbfbf"
 	  *mode-line-foreground-color* "#000000"
-	  *mode-line-border-color* "#000000"
+	  *mode-line-border-color* "#bfbfbf" ; #000000
 	  *mode-line-border-width* 1)
 (enable-mode-line (current-screen) (current-head) t)
 
-;; (ql:quickload "clx-truetype")
-;; (load-module "ttf-fonts")
-;; (xft:cache-fonts)
-;; (set-font (make-instance 'xft:font
-;;						 :family "Ubuntu Mono"
-;;						 :subfamily "Regular"
-;;						 :size 14
-;;						 :antialias t))
-(set-font "-xos4-terminus-bold-r-normal-*-17-*-*-*-*-*-*-*")
+(ql:quickload "clx-truetype")
+(load-module "ttf-fonts")
+(xft:cache-fonts)
+(set-font (make-instance 'xft:font
+						 :family "Ubuntu Mono"
+						 :subfamily "Regular"
+						 :size 14
+						 :antialias t))
+;;(set-font "-xos4-terminus-bold-r-normal-*-17-*-*-*-*-*-*-*")
 ;; (set-font "-misc-ubuntu mono-bold-r-normal-*-17-*-*-*-*-*-*-*")
 
 (set-prefix-key (kbd "s-SPC")) ; Set the prefix key.
