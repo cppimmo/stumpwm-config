@@ -85,3 +85,7 @@
   (enable-mode-line (current-screen) (current-head) nil)
   (enable-mode-line (current-screen) (current-head) t))
 
+(ql:quickload :swank)
+(defcommand cppimmo/cmd-swank-create-server () ()
+  "Create swank server instance with default port."
+  (swank:create-server))

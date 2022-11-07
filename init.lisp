@@ -16,6 +16,9 @@
 (load "~/.stumpwm.d/cppimmo/theme.lisp") ; Theme setting.
 (load "~/.stumpwm.d/cppimmo/placement.lisp") ; Window placement.
 ;; (load "~/.stumpwm.d/cppimmo/modeline.lisp") ; Modeline format.
+(load-module "stump-lock")
+(setf stump-lock:*password* "12345")
+(load-module "clipboard-history")
 (load "~/.stumpwm.d/cppimmo/commands.lisp") ; Commands for keybindings.
 (load "~/.stumpwm.d/cppimmo/keybinds.lisp") ; Keybind setting.
 
@@ -41,7 +44,7 @@
 
 (setf *window-format* "%m%n%s%c"
 	  *screen-mode-line-format* (list "[^b%n^b] %W^> %B | %d     ")
-	  *time-modeline-string* "%m/%d/%y %I:%M%p"
+	  *time-modeline-string* "%m/%e/%y %I:%M%p"
 	  *mode-line-timeout* 2
 	  *mode-line-background-color* "#bfbfbf"
 	  *mode-line-foreground-color* "#000000"
@@ -58,10 +61,20 @@
 						 :size 14
 						 :antialias t))
 ;;(set-font "-xos4-terminus-bold-r-normal-*-17-*-*-*-*-*-*-*")
-;; (set-font "-misc-ubuntu mono-bold-r-normal-*-17-*-*-*-*-*-*-*")
+;;set-font "-misc-ubuntu mono-bold-r-normal-*-17-*-*-*-*-*-*-*")
 
 (set-prefix-key (kbd "s-SPC")) ; Set the prefix key.
 
-;; This line needs to be as close to the end of the configuration file as possible to prevent crashing.
+;;(load-module "swm-gaps")
+;;(setf swm-gaps:*inner-gaps-size* 10)
+;;(setf swm-gaps:*outer-gaps-size* 15)
+
+;;; This line needs to be as close to the end of the configuration file as
+;;; possible to prevent crashing.
+(clipboard-history:start-clipboard-manager)
 (stumptray::stumptray)
+(setf *tray-win-background* *mode-line-background-color*
+	  *tray-viwin-background* *mode-line-background-color*
+	  *tray-hiwin-background* *mode-line-background-color*
+	  *tray-cursor-color* *mode-line-background-color*)
 (load "~/.stumpwm.d/cppimmo/autostart.lisp") ; Startup programs.

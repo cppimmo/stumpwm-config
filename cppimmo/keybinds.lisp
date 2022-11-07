@@ -32,7 +32,7 @@
 (define-key *root-map* (kbd "s-r") "cppimmo/cmd-reboot")
 (define-key *root-map* (kbd "s-s") "cppimmo/cmd-suspend")
 (define-key *root-map* (kbd "s-h") "cppimmo/cmd-hibernate")
-(define-key *root-map* (kbd "s-l") "cppimmo/cmd-lock-screen")
+(define-key *root-map* (kbd "s-l") "lock-screen")
 (define-key *root-map* (kbd "/") "cppimmo/cmd-program-menu")
 
 ;; Function Keys
@@ -46,3 +46,5 @@
 (define-key *root-map* (kbd "s-F11") "cppimmo/cmd-audio-volume-mute")
 
 (define-key *root-map* (kbd "s-SunPrint_Screen") "cppimmo/cmd-take-screenshot")
+
+(define-key *root-map* (kbd "C-y") "show-clipboard-history")
