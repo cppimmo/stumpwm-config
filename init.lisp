@@ -29,7 +29,7 @@
 	  *message-window-gravity* :top-right
 	  *input-window-gravity* :top-left
 	  *input-history-ignore-duplicates* t
-	  *mouse-focus-policy* :click ; Change window focus on click.
+	  *mouse-focus-policy* :sloppy ; Change window focus on click.
 	  *float-window-modifier* :SUPER
 	  *float-window-border* 2
 	  *float-window-title-height* 1
