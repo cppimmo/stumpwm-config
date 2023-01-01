@@ -45,6 +45,8 @@
 (define-key *root-map* (kbd "s-F10") "cppimmo/cmd-audio-volume-up")
 (define-key *root-map* (kbd "s-F11") "cppimmo/cmd-audio-volume-mute")
 
-(define-key *root-map* (kbd "s-SunPrint_Screen") "cppimmo/cmd-take-screenshot")
+(define-key *root-map* (kbd "SunPrint_Screen") "cppimmo/cmd-take-screenshot")
 
 (define-key *root-map* (kbd "C-y") "show-clipboard-history")
+
+(define-key *root-map* (kbd "M-r") "loadrc")

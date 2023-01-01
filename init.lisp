@@ -46,9 +46,9 @@
 	  *screen-mode-line-format* (list "[^b%n^b] %W^> %B | %d     ")
 	  *time-modeline-string* "%m/%e/%y %I:%M%p"
 	  *mode-line-timeout* 2
-	  *mode-line-background-color* "#bfbfbf"
-	  *mode-line-foreground-color* "#000000"
-	  *mode-line-border-color* "#bfbfbf" ; #000000
+	  *mode-line-background-color* "#333333" ; "#bfbfbf"
+	  *mode-line-foreground-color* "#f0f0f0" ; "#000000"
+	  *mode-line-border-color* "#333333" ; "#bfbfbf" ; #000000
 	  *mode-line-border-width* 1)
 (enable-mode-line (current-screen) (current-head) t)
 
